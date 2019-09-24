@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/JavaScript">
+function natsum()
+{
+var a = document.form.N.value;
+var i;
+var sum = 0;
+var N= new Number(a);
+for(i=1;i<=N;i++)
+sum=sum+i;
+document.write("<h2>sum of 1 to "+a+" natural numbers is "+sum+" </h2>");
+}
+</script>
+</head>
+<body>
+<p>sum of natural numbers:</p>
+<p>How many natural number(1 to ..)?</p>
+<form name ="form" onsubmit="natsum()">
+<input name ="N" type="text">
+<input type ="submit"value="show">
+</form>
+</body>
+</html>

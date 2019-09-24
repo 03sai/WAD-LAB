@@ -1,0 +1,60 @@
+<html>
+<head>
+<script language="JavaScript">
+<!--
+function showData()
+{
+var x=new Array();
+var i;
+var sum=0;
+var xbar=0.0;
+var deviation;
+x[1]=parseInt(document.formone.x1.value);
+x[2]=parseInt(document.formone.x2.value);
+x[3]=parseInt(document.formone.x3.value);
+x[4]=parseInt(document.formone.x4.value);
+x[5]=parseInt(document.formone.x5.value);
+x[6]=parseInt(document.formone.x6.value);
+x[7]=parseInt(document.formone.x7.value);
+x[8]=parseInt(document.formone.x8.value);
+x[9]=parseInt(document.formone.x9.value);
+x[10]=parseInt(document.formone.x10.value);
+// converting char data a,b,c from FORM to number
+document.write("<h2>Enter the numbers:<br>");
+document.write("<br>Given numbers:<br>");
+for (i=1;i<11;i++)
+{
+document.write(x[i]+"<br>");
+sum=sum+x[i];
+}
+xbar=sum/10;
+sum=0;
+for (i=1;i<11;i++)
+{
+sum=sum+Math.pow((x[i]-xbar),2);}
+deviation=sum/10;
+document.write("<br>Mean="+xbar+"<br>");
+document.write("Deviation="+deviation);
+//-->
+}
+</script>
+</head>
+<body>
+<p>Standard Deviation:</p>
+<hr>
+<p>Input 10 Numbers</p>
+<form name="formone" onsubmit="showData()" >
+<input name="x1" type="text"><br>
+<input name="x2" type="text"><br>
+<input name="x3" type="text"><br>
+<input name="x4" type="text"><br>
+<input name="x5" type="text"><br>
+<input name="x6" type="text"><br>
+<input name="x7" type="text"><br>
+<input name="x8" type="text"><br>
+<input name="x9" type="text"><br>
+<input name="x10" type="text"><br>
+<input type="submit" value="Show">
+</form>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<html>
+<head>
+<script language="JavaScript">
+function showData()
+{
+var x=new Array();
+var i;
+var j;
+var sum=0;
+var xbar=0.0;
+var deviation;
+var temp;
+x[1]=document.formone.x1.value;
+x[2]=document.formone.x2.value;
+x[3]=document.formone.x3.value;
+x[4]=document.formone.x4.value;
+x[5]=document.formone.x5.value;
+x[6]=document.formone.x6.value;
+x[7]=document.formone.x7.value;
+x[8]=document.formone.x8.value;
+x[9]=document.formone.x9.value;
+x[10]=document.formone.x10.value;
+// converting char data a,b,c from FORM to number
+document.write("<h2>Sorting of names:<br>");
+document.write("<br>Given numbers:<br>");
+for (i=1;i<11;i++)
+{
+document.write(x[i]+"<br>");
+}
+for (i=1;i<11;i++)
+{
+for(j=1;j<11;j++)
+{
+if (x[i]<=x[j])
+{
+temp=x[i]; x[i]=x[j]; x[j]=temp;
+}
+}
+}
+document.write('sorted list<br>');
+for (i=1;i<11;i++)
+{
+document.write(x[i]+"<br>");
+}
+}
+</script>
+</head>
+<body>
+<p>SORTING Numbers:</p>
+<hr>
+<p>Input 10 NAMES</p>
+<form name="formone" onsubmit="showData()" >
+<input name="x1" type="text"><br>
+<input name="x2" type="text"><br>
+<input name="x3" type="text"><br>
+<input name="x4" type="text"><br>
+<input name="x5" type="text"><br>
+<input name="x6" type="text"><br>
+<input name="x7" type="text"><br>
+<input name="x8" type="text"><br>
+<input name="x9" type="text"><br>
+<input name="x10" type="text"><br>
+<input type="submit" value="Show">
+</form>
+</body>
+</html>
