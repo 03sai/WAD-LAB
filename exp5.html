@@ -1,0 +1,42 @@
+<html>
+<head>
+<script language="JavaScript">
+function agevalidate(formone)
+{
+var nm=document.formone.name1.value;
+var sirnm=document.formone.sirname.value;
+var age=parseInt(document.formone.age.value);
+var wt=parseInt(document.formone.wt.value);
+if (age<17)
+{
+alert("Dear "+nm+" "+sirnm+","+"Age can not be less than 17 years!!!!!!!. Correct it");
+}
+}
+function weightvalidate(formone)
+{
+var nm=document.formone.name1.value;
+var sirnm=document.formone.sirname.value;
+var age=parseInt(document.formone.age.value);
+var wt=parseInt(document.formone.wt.value);
+if (!(wt>79) && (wt<101))
+{
+alert("Dear "+nm+" "+sirnm+","+"Wrong Age Entry !!!!. Allowed weight is bet. 80-100.
+Correct it");
+}
+}
+</script>
+</head>
+<body>
+<h1>Form Data VAlidation</h1>
+<hr>
+<FORM name="formone" post="get">
+<INPUT TYPE="text" NAME="name1" VALUE="Type Name" /><br>
+<INPUT TYPE="text" NAME="sirname" VALUE="Type sirname" /><br>
+<INPUT TYPE="text" NAME="age" VALUE="Type age"
+onblur="agevalidate(formone)"/><br>
+<INPUT TYPE="text" NAME="wt" VALUE="Type wight in Kgs."
+onblur="weightvalidate(formone)"/><br>
+<input type="submit" value="submit"/>
+</FORM>
+</body>
+</html>
