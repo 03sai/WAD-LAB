@@ -1,0 +1,71 @@
+<html>
+<head>
+<title> The Stacking order</title>
+<style type="text/css">
+.layer1Style
+{
+border: solid thick black;
+padding: 1em;
+width: 300px;
+background-color:cyan;
+position:absolute;
+top:100px;
+left:200px;
+z-index:0;
+}
+.layer2Style
+{
+border: solid thick red;
+padding: 1em;
+width:300px;
+background-color:BLUE;
+position:absolute;
+top:120px;
+left:220px;
+z-index:0;
+}
+.layer3Style
+{
+border:solid thick green;
+padding:1em;
+width:300px;
+background-color:white;
+position:absolute;
+top:140px;
+left:240px;
+z-index:0;
+}
+</style>
+<script type="text/javascript">
+var topLayer="layer3";
+function mover(toTop)
+{
+var oldTop=document.getElementById(topLayer).style;
+var newTop=document.getElementById(toTop).style;
+oldTop.zIndex="0";
+newTop.zIndex="10";
+topLayer=document.getElementById(toTop).id;
+}
+</script>
+</head>
+<body style="background-color:yellow">
+<h2 style="text-align:center; color:red">
+Program includes XHTML document to show the stacking of Paragraphs</h2>
+<div style="z-index:10;" class="layer1Style" id="layer1"
+onmouseover="mover('layer1')">
+The lives of most inhabitants of Industrialized Contries as well as some
+unindustrialsed countries have been changed forever by the advent of WWW.
+</div>
+<div style="z-index:2;" class ="layer2Style" id="layer2"
+onmouseover="mover('layer2')">
+The www may seem like magic until you understand how it works. The web is
+accessed throuh a browser.
+</div>
+<div style="z-index: 0;" class="layer3Style" id="layer3"
+onmouseover="mover('layer3')">
+Windows XP provides many ways for you to communicate with friends, co
+workers,
+and with the rest of the World.
+</div>
+</body>
+</html>
