@@ -1,0 +1,57 @@
+<html>
+<head>
+<script type="text/JavaScript">
+
+function agevalidate(formone)
+{
+var nm=document.formone.name1.value;
+var snm=document.formone.sirname.value;
+var age=parseInt(document.formone.age.value);
+var wt=parseInt(document.formone.wt.value);
+
+if (age<17)
+{
+alert("Age can not be less than 17 years");																		
+}
+}
+
+function weightvalidate(formone)
+{
+var nm=document.formone.name1.value;
+var snm=document.formone.sirname.value;
+var age=parseInt(document.formone.age.value);
+var wt=parseInt(document.formone.wt.value);
+
+if (wt<80)
+{
+alert("The entered weight is less than 80.");
+}
+
+if(wt>100)
+{
+alert("The entered weight is greater than 100");
+}
+
+}
+
+function allokay()
+{
+alert("The entered values are validated");
+}
+</script>
+</head>
+
+<body>
+
+<h1>Form Data VAlidation</h1>
+<hr>
+
+<FORM name="formone" post="get">
+<INPUT TYPE="text" NAME="name1" VALUE="Type Name" /><br>
+<INPUT TYPE="text" NAME="sirname" VALUE="Type surname" /><br>
+<INPUT TYPE="text" NAME="age" VALUE="Type age" onblur="agevalidate(formone)"/><br>
+<INPUT TYPE="text" NAME="wt" VALUE="Type weight" onblur="weightvalidate(formone)"/><br>
+<input type="submit" value="click" onclick="allokay();" />
+</FORM>
+</body>
+</html>
